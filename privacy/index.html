@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Politique de confidentialité - SAN</title>
+<meta name="description" content="Politique de confidentialité de l'application SAN."/>
+<meta name="robots" content="index, follow"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+  :root { --blue:#002DFF; --yel:#FFD954; --dark:#1C1209; --muted:#6b5d50; --line:rgba(28,18,9,.10); --bg:#FEFAF5; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:'Instrument Sans',system-ui,sans-serif; color:var(--dark); background:var(--bg); line-height:1.7; }
+  .topbar { border-bottom:1px solid var(--line); background:#fff; }
+  .topbar-inner { max-width:760px; margin:0 auto; padding:1rem 1.5rem; display:flex; align-items:center; justify-content:space-between; }
+  .brand { font-family:'Playfair Display',serif; font-weight:900; font-size:1.25rem; letter-spacing:-.02em; color:var(--dark); text-decoration:none; }
+  .brand span { color:var(--blue); }
+  .back { font-size:.85rem; font-weight:600; color:var(--blue); text-decoration:none; }
+  main { max-width:760px; margin:0 auto; padding:3rem 1.5rem 5rem; }
+  h1 { font-family:'Playfair Display',serif; font-weight:900; font-size:clamp(1.9rem,5vw,2.7rem); line-height:1.1; letter-spacing:-.025em; margin-bottom:.5rem; }
+  .meta { font-size:.8rem; color:var(--muted); margin-bottom:2rem; text-transform:uppercase; letter-spacing:.06em; }
+  .intro { font-size:1.02rem; color:#3a2e22; margin-bottom:2.5rem; }
+  .intro p + p { margin-top:.8rem; }
+  section { margin-bottom:2.2rem; }
+  h2 { font-family:'Playfair Display',serif; font-weight:700; font-size:1.3rem; letter-spacing:-.01em; margin-bottom:.7rem; padding-top:.6rem; border-top:1px solid var(--line); padding-top:1.4rem; }
+  h2 .num { color:var(--blue); margin-right:.4rem; }
+  h3 { font-weight:600; font-size:1.02rem; margin:1.1rem 0 .4rem; }
+  p { margin-bottom:.6rem; }
+  ul { margin:.4rem 0 .8rem 1.2rem; }
+  li { margin-bottom:.35rem; }
+  dl { margin:.6rem 0; display:grid; grid-template-columns:max-content 1fr; gap:.35rem 1rem; }
+  dt { font-weight:600; color:var(--muted); }
+  .note { background:#FFF6DA; border-left:3px solid var(--yel); padding:.7rem 1rem; border-radius:0 8px 8px 0; font-size:.92rem; margin:.6rem 0; }
+  .items-label { font-weight:600; margin-top:.6rem; }
+  a { color:var(--blue); }
+  footer { max-width:760px; margin:0 auto; padding:2rem 1.5rem 4rem; border-top:1px solid var(--line); font-size:.82rem; color:var(--muted); }
+  footer a { font-weight:600; text-decoration:none; }
+  .footer-links { display:flex; gap:1.2rem; flex-wrap:wrap; margin-bottom:.8rem; }
+</style>
+</head>
+<body>
+<header class="topbar"><div class="topbar-inner">
+  <a class="brand" href="/">S<span>A</span>N</a>
+  <a class="back" href="/">&larr; Accueil</a>
+</div></header>
+<main>
+  <h1>Politique de confidentialité</h1>
+  <div class="meta">Version 2.0 · En vigueur le 2026-06-10</div>
+  <div class='intro'><p>Nous attachons une grande importance à la protection de vos données personnelles. La présente politique décrit les données collectées, leur utilisation et vos droits conformément au Règlement Général sur la Protection des Données (RGPD).</p></div>
+  <section><h2><span class='num'>1</span>Données collectées</h2>
+<p>Nous collectons les informations suivantes :</p>
+<ul>
+<li>Données d&#x27;identité : nom, prénom, date de naissance, photo de profil.</li>
+<li>Données de contact : adresse e-mail, numéro de téléphone, adresse postale.</li>
+<li>Données d&#x27;utilisation : centres d&#x27;intérêt, biographie, historique de réservations et d&#x27;activités.</li>
+<li>Données de galerie : photos publiées volontairement par l&#x27;utilisateur dans sa galerie publique.</li>
+<li>Données de localisation GPS : collectées uniquement lors de l&#x27;activation d&#x27;une sortie, dans le cadre des fonctionnalités d&#x27;urgence SOS (contacts d&#x27;urgence, sécurité).</li>
+<li>Données techniques : tokens d&#x27;appareils FCM (Firebase Cloud Messaging) pour les notifications push.</li>
+<li>Données financières : identifiants techniques Stripe (PaymentIntent ID, Customer ID), 4 derniers chiffres du moyen de paiement et type de carte, historique des paiements de réservations. Aucun numéro de carte complet n&#x27;est stocké par SAN — ces données sont gérées exclusivement par Stripe.</li>
+<li>Données de vérification d&#x27;identité (uniquement si vérification Stripe Identity déclenchée) : statut de la session de vérification. La pièce d&#x27;identité et le selfie sont traités directement par Stripe et ne transitent pas par les serveurs SAN.</li>
+</ul>
+</section>
+<section><h2><span class='num'>2</span>Finalités du traitement</h2>
+<p>Vos données sont utilisées pour :</p>
+<ul>
+<li>Gérer votre compte et votre profil sur l&#x27;application.</li>
+<li>Faciliter la mise en relation entre membres pour des sorties partagées.</li>
+<li>Envoyer des notifications push liées à vos activités et réservations.</li>
+<li>Assurer la sécurité des utilisateurs via le module SOS (localisation d&#x27;urgence).</li>
+<li>Permettre aux gérants de lieu de proposer des activités sur la plateforme.</li>
+<li>Traiter vos opérations de paiement (réservations).</li>
+<li>Respecter nos obligations légales en matière de lutte contre le blanchiment de capitaux et le financement du terrorisme (LCB-FT).</li>
+<li>Détecter et prévenir les opérations frauduleuses.</li>
+</ul>
+</section>
+<section><h2><span class='num'>3</span>Durée de conservation</h2>
+<p>Vos données personnelles sont conservées :</p>
+<ul>
+<li>Pendant toute la durée d&#x27;activité de votre compte.</li>
+<li>3 ans après votre dernière connexion si votre compte est inactif (données de profil).</li>
+<li>5 ans à compter de la fin de la relation contractuelle pour les données relatives aux opérations de paiement, en application de l&#x27;article L.561-12 du Code monétaire et financier (obligations LCB-FT). Cette obligation prime sur le droit à l&#x27;effacement.</li>
+<li>Les données de localisation GPS ne sont jamais stockées en base de données, elles sont transmises uniquement en temps réel aux contacts d&#x27;urgence désignés.</li>
+<li>En cas de suppression de compte, vos données non financières sont anonymisées sous 30 jours ; les données financières sont conservées en archive intermédiaire pendant la durée légale de 5 ans, avec accès restreint.</li>
+</ul>
+</section>
+<section><h2><span class='num'>4</span>Partage des données</h2>
+<p>Vos données ne sont jamais vendues. Elles sont partagées uniquement :</p>
+<ul>
+<li>Avec Supabase (hébergement et authentification).</li>
+<li>Avec Firebase (Google) pour les notifications push.</li>
+<li>Avec les autres membres de la plateforme, dans la limite des informations que vous rendez publiques dans votre profil.</li>
+<li>Avec Stripe Payments Europe Ltd (Irlande) pour le traitement des opérations de paiement, les reversements aux gérants partenaires via Stripe Connect, et la vérification d&#x27;identité le cas échéant (Stripe Identity).</li>
+<li>Avec les autorités compétentes (TRACFIN, juridictions, ACPR, autorités fiscales) en cas d&#x27;obligation légale de communication.</li>
+</ul>
+</section>
+<section><h2><span class='num'>5</span>Vos droits (RGPD)</h2>
+<p>Conformément au RGPD, vous disposez des droits suivants :</p>
+<ul>
+<li>Droit d&#x27;accès à vos données personnelles.</li>
+<li>Droit de rectification des données inexactes.</li>
+<li>Droit à l&#x27;effacement (droit à l&#x27;oubli) : supprimable depuis l&#x27;application. Important : pour les données relatives aux opérations de paiement, le droit à l&#x27;effacement est limité par notre obligation légale de conservation pendant 5 ans (article L.561-12 du Code monétaire et financier). Ces données sont alors mises en archive intermédiaire avec accès restreint.</li>
+<li>Droit à la portabilité de vos données.</li>
+<li>Droit d&#x27;opposition au traitement.</li>
+</ul>
+<div class='note'>Pour exercer vos droits, contactez-nous à : bcayol@san-tls.com</div>
+</section>
+<section><h2><span class='num'>6</span>Responsable du traitement</h2>
+<dl>
+<dt>Dénomination</dt><dd>SAN - SAS au capital de 5 €</dd>
+<dt>Siège social</dt><dd>1 Ruelle de Paris, 94450 Limeil-Brévannes, France</dd>
+<dt>SIREN</dt><dd>107 070 237</dd>
+<dt>SIRET (siège)</dt><dd>107 070 237 00014</dd>
+<dt>RCS</dt><dd>Créteil 107 070 237</dd>
+<dt>TVA intracommunautaire</dt><dd>FR73 107 070 237</dd>
+<dt>Président</dt><dd>Benjamin Cayol</dd>
+<dt>Contact</dt><dd>bcayol@san-tls.com</dd>
+</dl>
+<p class='items-label'>Sous-traitants principaux :</p>
+<ul>
+<li>Supabase (hébergement, authentification) - UE.</li>
+<li>Firebase / Google Cloud (notifications push) - UE/USA (clauses contractuelles types).</li>
+<li>Stripe Payments Europe Ltd (paiements) - Irlande.</li>
+<li>Stripe, Inc. (groupe Stripe, certains traitements techniques) - États-Unis (clauses contractuelles types).</li>
+</ul>
+</section>
+<section><h2><span class='num'>7</span>Transferts de données hors Union Européenne</h2>
+<p>Certains de nos sous-traitants (Stripe Inc., Google) peuvent traiter vos données aux États-Unis. Ces transferts sont encadrés par :</p>
+<ul>
+<li>les clauses contractuelles types adoptées par la Commission européenne ;</li>
+<li>le cadre de protection des données UE-États-Unis (Data Privacy Framework) lorsqu&#x27;applicable.</li>
+</ul>
+<div class='note'>Vous pouvez obtenir copie de ces garanties en nous contactant à bcayol@san-tls.com.</div>
+</section>
+<section><h2><span class='num'>8</span>Réclamations</h2>
+<p>Si vous estimez que vos droits ne sont pas respectés, vous pouvez :</p>
+<ul>
+<li>Nous contacter à bcayol@san-tls.com.</li>
+<li>Saisir la CNIL (Commission Nationale de l&#x27;Informatique et des Libertés) - www.cnil.fr.</li>
+</ul>
+</section>
+</main>
+<footer>
+  <div class="footer-links">
+    <a href="/privacy/">Confidentialité</a>
+    <a href="/cgu/">CGU</a>
+    <a href="/mentions/">Mentions légales</a>
+  </div>
+  SAN - SAS · 1 Ruelle de Paris, 94450 Limeil-Brévannes · <a href="mailto:bcayol@san-tls.com">bcayol@san-tls.com</a>
+</footer>
+</body>
+</html>

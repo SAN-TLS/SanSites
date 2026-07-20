@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Fichiers techniques deep-link (servis tels quels - voir .well-known/)
+Allow: /.well-known/
