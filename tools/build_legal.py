@@ -180,7 +180,7 @@ def build(doc_key: str) -> None:
     out_dir = SITE / folder
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "index.html").write_text(page, encoding="utf-8")
-    print(f"  ✓ {folder}/index.html  ({len(page):,} octets)")
+    print(f"  [OK] {folder}/index.html  ({len(page):,} octets)")
 
 
 if __name__ == "__main__":
