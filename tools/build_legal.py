@@ -33,13 +33,9 @@ if LEGAL_SRC is None:
     # Repli : chemin absolu attendu sur ce poste.
     LEGAL_SRC = Path(r"C:/Users/seerm/IdeaProjects/SanApp/assets/data/legal")
 
-# --- Décision de réalignement ---------------------------------------------
-# Contact canonique = contact@san-tls.com, MAIS l'alias Workspace n'existe pas
-# encore (pas d'accès admin.google au 20/07/2026). En attendant, on route sur
-# la boîte du fondateur bcayol@san-tls.com. À rebasculer sur contact@san-tls.com
-# dès l'alias créé (une ligne à changer + régénérer).
+# --- Adresse e-mail canonique ---------------------------------------------
 OLD_EMAIL = "contact@san.maashrees.com"
-NEW_EMAIL = "bcayol@san-tls.com"
+NEW_EMAIL = "contact@san-tls.com"
 
 DOCS = {
     "privacy":  ("privacy.json",  "Politique de confidentialité", "privacy"),
@@ -60,32 +56,32 @@ PAGE_TMPL = """<!DOCTYPE html>
 <style>
   :root {{ --blue:#002DFF; --yel:#FFD954; --dark:#1C1209; --muted:#6b5d50; --line:rgba(28,18,9,.10); --bg:#FEFAF5; }}
   * {{ box-sizing:border-box; margin:0; padding:0; }}
-  body {{ font-family:'Instrument Sans',system-ui,sans-serif; color:var(--dark); background:var(--bg); line-height:1.7; }}
+  body {{ font-family:'Instrument Sans',system-ui,sans-serif; color:var(--dark); background:var(--bg); font-size:1.08rem; line-height:1.75; }}
   .topbar {{ border-bottom:1px solid var(--line); background:#fff; }}
-  .topbar-inner {{ max-width:760px; margin:0 auto; padding:1rem 1.5rem; display:flex; align-items:center; justify-content:space-between; }}
-  .brand {{ font-family:'Playfair Display',serif; font-weight:900; font-size:1.25rem; letter-spacing:-.02em; color:var(--dark); text-decoration:none; }}
+  .topbar-inner {{ max-width:820px; margin:0 auto; padding:1.2rem 1.5rem; display:flex; align-items:center; justify-content:space-between; }}
+  .brand {{ font-family:'Playfair Display',serif; font-weight:900; font-size:1.4rem; letter-spacing:-.02em; color:var(--dark); text-decoration:none; }}
   .brand span {{ color:var(--blue); }}
-  .back {{ font-size:.85rem; font-weight:600; color:var(--blue); text-decoration:none; }}
-  main {{ max-width:760px; margin:0 auto; padding:3rem 1.5rem 5rem; }}
-  h1 {{ font-family:'Playfair Display',serif; font-weight:900; font-size:clamp(1.9rem,5vw,2.7rem); line-height:1.1; letter-spacing:-.025em; margin-bottom:.5rem; }}
-  .meta {{ font-size:.8rem; color:var(--muted); margin-bottom:2rem; text-transform:uppercase; letter-spacing:.06em; }}
-  .intro {{ font-size:1.02rem; color:#3a2e22; margin-bottom:2.5rem; }}
-  .intro p + p {{ margin-top:.8rem; }}
-  section {{ margin-bottom:2.2rem; }}
-  h2 {{ font-family:'Playfair Display',serif; font-weight:700; font-size:1.3rem; letter-spacing:-.01em; margin-bottom:.7rem; padding-top:.6rem; border-top:1px solid var(--line); padding-top:1.4rem; }}
+  .back {{ font-size:.95rem; font-weight:600; color:var(--blue); text-decoration:none; }}
+  main {{ max-width:820px; margin:0 auto; padding:3.5rem 1.5rem 6rem; }}
+  h1 {{ font-family:'Playfair Display',serif; font-weight:900; font-size:clamp(2.2rem,5.5vw,3rem); line-height:1.15; letter-spacing:-.025em; margin-bottom:.7rem; }}
+  .meta {{ font-size:.88rem; color:var(--muted); margin-bottom:2.2rem; text-transform:uppercase; letter-spacing:.06em; font-weight:500; }}
+  .intro {{ font-size:1.15rem; color:#3a2e22; margin-bottom:2.8rem; font-weight:400; line-height:1.8; }}
+  .intro p + p {{ margin-top:1rem; }}
+  section {{ margin-bottom:2.5rem; }}
+  h2 {{ font-family:'Playfair Display',serif; font-weight:700; font-size:1.5rem; letter-spacing:-.01em; margin-bottom:.8rem; border-top:1px solid var(--line); padding-top:1.6rem; }}
   h2 .num {{ color:var(--blue); margin-right:.4rem; }}
-  h3 {{ font-weight:600; font-size:1.02rem; margin:1.1rem 0 .4rem; }}
-  p {{ margin-bottom:.6rem; }}
-  ul {{ margin:.4rem 0 .8rem 1.2rem; }}
-  li {{ margin-bottom:.35rem; }}
-  dl {{ margin:.6rem 0; display:grid; grid-template-columns:max-content 1fr; gap:.35rem 1rem; }}
+  h3 {{ font-weight:600; font-size:1.18rem; margin:1.3rem 0 .5rem; }}
+  p {{ margin-bottom:.8rem; }}
+  ul {{ margin:.5rem 0 1rem 1.4rem; }}
+  li {{ margin-bottom:.45rem; }}
+  dl {{ margin:.8rem 0; display:grid; grid-template-columns:max-content 1fr; gap:.5rem 1.2rem; font-size:1.05rem; }}
   dt {{ font-weight:600; color:var(--muted); }}
-  .note {{ background:#FFF6DA; border-left:3px solid var(--yel); padding:.7rem 1rem; border-radius:0 8px 8px 0; font-size:.92rem; margin:.6rem 0; }}
-  .items-label {{ font-weight:600; margin-top:.6rem; }}
+  .note {{ background:#FFF6DA; border-left:4px solid var(--yel); padding:.85rem 1.2rem; border-radius:0 8px 8px 0; font-size:1.02rem; margin:.8rem 0; }}
+  .items-label {{ font-weight:600; margin-top:.8rem; }}
   a {{ color:var(--blue); }}
-  footer {{ max-width:760px; margin:0 auto; padding:2rem 1.5rem 4rem; border-top:1px solid var(--line); font-size:.82rem; color:var(--muted); }}
+  footer {{ max-width:820px; margin:0 auto; padding:2.5rem 1.5rem 4.5rem; border-top:1px solid var(--line); font-size:.92rem; color:var(--muted); }}
   footer a {{ font-weight:600; text-decoration:none; }}
-  .footer-links {{ display:flex; gap:1.2rem; flex-wrap:wrap; margin-bottom:.8rem; }}
+  .footer-links {{ display:flex; gap:1.4rem; flex-wrap:wrap; margin-bottom:1rem; font-size:.98rem; }}
 </style>
 </head>
 <body>

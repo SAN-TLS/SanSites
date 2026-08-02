@@ -79,8 +79,7 @@ consentement.
 
 - Écran de consentement Google : Accueil `https://www.san-tls.com`,
   Confidentialité `…/privacy`, CGU `…/cgu`, domaine autorisé `san-tls.com`,
-  email support `bcayol@san-tls.com` (alias `contact@san-tls.com` pas encore créé
-  - pas d'accès admin Workspace au 20/07/2026 ; rebasculer dès que possible).
+  email support `contact@san-tls.com`.
 - App Store Connect : Privacy Policy URL `https://www.san-tls.com/privacy`.
 
 ## À faire plus tard
