@@ -3,3 +3,6 @@ Allow: /
 
 # Fichiers techniques deep-link (servis tels quels - voir .well-known/)
 Allow: /.well-known/
+
+Sitemap: https://www.san-tls.com/sitemap.xml
+
