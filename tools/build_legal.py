@@ -93,8 +93,6 @@ PAGE_TMPL = """<!DOCTYPE html>
   <a class="brand" href="/"><img src="/assets/logo/SAN_transparent.png" alt="SAN Logo"/></a>
   <a class="back" href="/">&larr; Accueil</a>
 </div></header>
-  <a class="back" href="/">&larr; Accueil</a>
-</div></header>
 <main>
   <h1>{title}</h1>
   <div class="meta">{meta}</div>
